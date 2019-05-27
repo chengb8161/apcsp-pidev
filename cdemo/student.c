@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <student.h>
+#include "student.h"
 
 struct Student 
 {
