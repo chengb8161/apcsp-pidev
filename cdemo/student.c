@@ -21,6 +21,7 @@ int main()
 {
   struct Student JohnSmith;
   struct Student JaneDoe;
+  char input, name;
 
   strcpy(&JohnSmith.firstName, "John");
   strcpy(&JohnSmith.lastName, "Smith");
@@ -33,7 +34,7 @@ int main()
   JaneDoe.studentID = 011235;
   
   printf("Which student(s)?\n");
-  fgets(input, 256, stdin);
-  sscanf(input, "%s", name);
-  printStudent(struct Student* name)
+  fgets(&input, 256, stdin);
+  sscanf(&input, "%c", &name);
+  printStudent(struct Student* name);
 }
