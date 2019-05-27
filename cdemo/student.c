@@ -7,7 +7,7 @@ struct Student
   char lastName;
   int age;
   int studentID;
-};
+} Student;
 
 char printStudent (struct Student* student)
 {
