@@ -48,7 +48,7 @@ int main()
   printf("It stores the value %d\n", *ptrtoe);
   printf("The address of e is %d\n", &e);
 
-  int temp = d;
+  float temp = d;
   d = e;
   e = temp;
 
