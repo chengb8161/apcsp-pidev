@@ -18,7 +18,7 @@ int main()
   printf("It stores the value %d\n", *ptrtoa);
   printf("The address of a is %d\n", &a);
 
-  int d;
+  float d;
   int* ptrtod;
 
   ptrtod = &d;
@@ -33,7 +33,7 @@ int main()
   printf("It stores the value %d\n", *ptrtod);
   printf("The address of d is %d\n", &d);
   
-  int e;
+  float e;
   int* ptrtoe;
 
   ptrtoe = &e;
