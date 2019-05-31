@@ -8,17 +8,31 @@ float areaOfCircle(float radius)
 
 int main(int argc, char* argv[])
 {
-  int arg = 0;
-  while (arg < argc)
+ if (argc != 3)
   {
-    printf("Bound %d is %s\n", arg, argv[arg]);
-    arg++;
+    printf("%s : expected 2 args, please enter two floats\n", argv[0]);
+    return 1;
   }
-  float lower, upper;
-  printf("Enter a lower bound:\n");
-  scanf("%f", &lower);
-  printf("Enter an upper bound:\n");
-  scanf("%f", &upper);
+  
+  float lower;
+  int found = sscanf(argv[1], "%f", &lower);
+  if (found != 1)
+    {
+	printf("First arg is not a decimal, enter two floats\n");
+	return 1;
+    }
+
+  float upper;
+  found = sscanf(argv[2], "%f", &upper);
+  if (found != 1)
+    {
+	printf("Second arg is not a decimal, enter two floats\n");
+	return 1;
+    }
+  //printf("Enter a lower bound:\n");
+  //scanf("%f", &lower);
+  //printf("Enter an upper bound:\n");
+  //scanf("%f", &upper);
   for (float radius = lower; radius <= upper; radius++)
     {
 	float result = areaOfCircle(radius);
